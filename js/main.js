@@ -13,7 +13,6 @@ let images = ["1.webp", "2.jpeg", "3.webp"];
 let bubble = document.querySelectorAll(" .transiant span");
 // change the background image of the home section every 5 seconds
 let i = 2;
-
 setInterval(() => {
   console.log(i - 1);
   home.style.backgroundImage = `url('./img/img ${images[i - 1]}')`;
