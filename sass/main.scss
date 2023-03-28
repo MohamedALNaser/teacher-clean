@@ -1,8 +1,17 @@
 // #183153
 // $main-color:#183153;
 $main-color:#aedfdd;
+@mixin transition($duration) {
+    transition: all $duration;
+    -webkit-transition: all $duration;
+    -moz-transition: all $duration;
+    -ms-transition: all $duration;
+    -o-transition: all $duration;
+}
+
 * {
     box-sizing: border-box;
+    @include transition(.3s);
 }
 
 //Golble styles
