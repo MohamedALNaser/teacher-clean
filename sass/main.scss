@@ -1,17 +1,8 @@
 // #183153
 // $main-color:#183153;
 $main-color:#aedfdd;
-@mixin transition($duration) {
-    transition: all $duration;
-    -webkit-transition: all $duration;
-    -moz-transition: all $duration;
-    -ms-transition: all $duration;
-    -o-transition: all $duration;
-}
-
 * {
     box-sizing: border-box;
-    @include transition(.3s);
 }
 
 //Golble styles
@@ -35,6 +26,22 @@ i {
     -moz-border-radius: $dim;
     -ms-border-radius: $dim;
     -o-border-radius: $dim;
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+
+@mixin transition($property, $duration) {
+    transition: $property $duration;
+    -webkit-transition: $property $duration;
+    -moz-transition: $property $duration;
+    -ms-transition: $property $duration;
+    -o-transition: $property $duration;
 }
 
 .container {
@@ -84,6 +91,8 @@ i {
                 }
                 span {
                     color: $main-color;
+                    padding: 0 8px;
+                    font-size: 22px;
                 }
                 img {
                     width: $dim;
@@ -92,11 +101,13 @@ i {
             }
         }
         &.home {
-            background-image: url("./../img/img 1.jpeg");
+            background-image: url("./../img/img\ 1.webp");
             background-repeat: no-repeat;
             background-size: cover;
             height: 84vh;
             position: relative;
+            @include transition(background-image,
+            0.3s);
             .container {
                 align-items: flex-end;
                 flex-direction: column;
@@ -127,6 +138,27 @@ i {
                 font-weight: 400;
                 width: 50%;
                 direction: rtl;
+            }
+            // .trasiant {
+            $dim: 25px;
+            .transiant {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                height: 30px;
+                width: 93px;
+                z-index: 10;
+                span {
+                    margin: 0 5px;
+                    padding: 0px 8.5px;
+                    border: 2px solid #141414;
+                    cursor: pointer;
+                    @include radius(50%);
+                    &.active {
+                        background-color: $main-color;
+                        // border-color: $main-color;
+                    }
+                }
             }
         }
     }
