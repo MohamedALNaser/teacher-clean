@@ -1,0 +1,124 @@
+// #183153
+// $main-color:#183153;
+$main-color:#aedfdd;
+* {
+    box-sizing: border-box;
+}
+
+//Golble styles
+i {
+    color: $main-color;
+    font-weight: 600 !important;
+    margin: 5px;
+    font-size: 22px;
+}
+
+@mixin dflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@mixin radius($dim) {
+    border-radius: $dim;
+    -webkit-border-radius: $dim;
+    -moz-border-radius: $dim;
+    -ms-border-radius: $dim;
+    -o-border-radius: $dim;
+}
+
+.container {
+    // max-width: 1173px;
+    width: 98%;
+    margin: 0 auto;
+    padding: 6px;
+    @include dflex();
+}
+
+.page {
+    .row {
+        width: 100%;
+        &.contact {
+            background-color: #141414;
+            border-bottom: 2px solid #646060;
+        }
+        &.header {
+            background-color: #1c1917;
+            .container {
+                justify-content: space-between;
+                // padding: 10px 15px;
+            }
+            .menu {
+                @include dflex();
+                .phase {
+                    width: 30px;
+                    height: 30px;
+                    padding: 0 4px;
+                    cursor: pointer;
+                    span {
+                        @include dflex();
+                        flex-direction: column;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $main-color;
+                        margin: 5px 0;
+                    }
+                }
+                ul {}
+            }
+            $dim:40px;
+            .logo {
+                a {
+                    text-decoration: none;
+                    @include dflex();
+                }
+                span {
+                    color: $main-color;
+                }
+                img {
+                    width: $dim;
+                    height: $dim;
+                }
+            }
+        }
+        &.home {
+            background-image: url("./../img/img 1.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 84vh;
+            position: relative;
+            .container {
+                align-items: flex-end;
+                flex-direction: column;
+                height: 100%;
+                color: #fff;
+                position: relative;
+                z-index: 2;
+            }
+            .opa {
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                opacity: 0.2;
+                position: absolute;
+                z-index: 1;
+            }
+            h1 {
+                margin-bottom: 3px;
+                font-size: 46px;
+                font-weight: bolder;
+                background-color: #afa5a53b;
+                // border color #0e0c0c
+                border-right: 3px solid $main-color;
+                padding-right: 10px;
+            }
+            p {
+                font-size: 24px;
+                font-weight: 400;
+                width: 50%;
+                direction: rtl;
+            }
+        }
+    }
+}
