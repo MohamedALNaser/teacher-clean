@@ -174,13 +174,13 @@ i {
   box-shadow: 0 0 1px 2px rgba(229, 216, 216, 0.8901960784);
 }
 .page section .row.why-us .row .col.diamond {
-  --animate-duration: 0.5s;
-}
-.page section .row.why-us .row .col.stopwatch {
   --animate-duration: 1s;
 }
+.page section .row.why-us .row .col.stopwatch {
+  --animate-duration: 2s;
+}
 .page section .row.why-us .row .col.savecost {
-  --animate-duration: 1.5s;
+  --animate-duration: 3s;
 }
 .page section .row.why-us .row .col .card {
   padding: 10px;

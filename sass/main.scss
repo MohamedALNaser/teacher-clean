@@ -194,13 +194,13 @@ i {
                         box-shadow: 0 0 1px 2px #e5d8d8e3;
                     }
                     &.diamond {
-                        --animate-duration: 0.5s;
-                    }
-                    &.stopwatch {
                         --animate-duration: 1s;
                     }
+                    &.stopwatch {
+                        --animate-duration: 2s;
+                    }
                     &.savecost {
-                        --animate-duration: 1.5s;
+                        --animate-duration: 3s;
                     }
                     .card {
                         padding: 10px;
