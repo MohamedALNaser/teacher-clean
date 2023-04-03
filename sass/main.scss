@@ -46,7 +46,7 @@ i {
 
 .container {
     // max-width: 1173px;
-    width: 98%;
+    width: 95%;
     margin: 0 auto;
     padding: 6px;
     @include dflex();
@@ -133,6 +133,7 @@ i {
                     // border color #0e0c0c
                     border-right: 3px solid $main-color;
                     padding-right: 10px;
+                    direction: rtl;
                 }
                 p {
                     font-size: 24px;
@@ -170,23 +171,30 @@ i {
         }
     }
     section {
+        >div {
+            h2 {
+                margin: 25px 0;
+                font-size: 28px;
+                border-bottom: 5px solid #aedfdd;
+                padding: 0 5px;
+            }
+            .row {
+                padding: 25px 0 50px;
+                @include dflex();
+                justify-content: space-evenly;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
         .row.why-us {
             background-color: #141414;
-            padding: 50px;
             direction: rtl;
             text-align: center;
             color: #fff;
             .container {
                 flex-direction: column;
             }
-            h2 {
-                font-size: 28px;
-                margin-bottom: 50px;
-            }
             .row {
-                @include dflex();
-                justify-content: space-evenly;
-                width: 100%;
                 .col {
                     width: calc((100% - 192px)/3);
                     @include radius(4px);

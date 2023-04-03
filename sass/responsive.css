@@ -1,0 +1,33 @@
+@media screen and (max-width: 420px) {
+  .page header .row.home h1 {
+    font-size: 42px;
+  }
+  .page section .row.why-us {
+    padding: 25px;
+  }
+  .page section .row.why-us .row {
+    flex-direction: column;
+  }
+  .page section .row.why-us .row .col {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .page section .row.why-us .row .col .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 768px) {
+  .page section .row.why-us {
+    padding: 25px;
+  }
+  .page section .row.why-us .row .col {
+    width: 45%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .page header .row.home p {
+    width: 100%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */

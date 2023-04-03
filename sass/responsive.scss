@@ -1,0 +1,51 @@
+@media screen and (max-width: 420px) {
+    .page header .row.home h1 {
+        font-size: 42px;
+    }
+    .page section .row.why-us {
+        padding: 25px;
+        .row {
+            flex-direction: column;
+            .col {
+                width: 100%;
+                margin-bottom: 50px;
+                .card {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 768px) {
+    .page section .row.why-us {
+        padding: 25px;
+        .row {
+            .col {
+                width: 45%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {}
+
+@media (max-width: 768px) {
+    .page header .row.home p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) and (max-width: 992px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

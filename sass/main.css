@@ -10,7 +10,7 @@ i {
 }
 
 .container {
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding: 6px;
   display: flex;
@@ -106,6 +106,7 @@ i {
   background-color: rgba(175, 165, 165, 0.231372549);
   border-right: 3px solid #aedfdd;
   padding-right: 10px;
+  direction: rtl;
 }
 .page header .row.home p {
   font-size: 24px;
@@ -140,27 +141,30 @@ i {
 .page header .row.home .transiant span.active {
   background-color: #aedfdd;
 }
-.page section .row.why-us {
-  background-color: #141414;
-  padding: 50px;
-  direction: rtl;
-  text-align: center;
-  color: #fff;
-}
-.page section .row.why-us .container {
-  flex-direction: column;
-}
-.page section .row.why-us h2 {
+.page section > div h2 {
+  margin: 25px 0;
   font-size: 28px;
-  margin-bottom: 50px;
+  border-bottom: 5px solid #aedfdd;
+  padding: 0 5px;
 }
-.page section .row.why-us .row {
+.page section > div .row {
+  padding: 25px 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   justify-content: space-evenly;
   width: 100%;
+  flex-wrap: wrap;
+}
+.page section .row.why-us {
+  background-color: #141414;
+  direction: rtl;
+  text-align: center;
+  color: #fff;
+}
+.page section .row.why-us .container {
+  flex-direction: column;
 }
 .page section .row.why-us .row .col {
   width: calc((100% - 192px) / 3);
