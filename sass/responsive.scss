@@ -9,9 +9,13 @@
             .col {
                 width: 100%;
                 margin-bottom: 50px;
-                .card {
-                    width: 100%;
-                }
+            }
+        }
+    }
+    .page section .row.sevices {
+        .row {
+            .col {
+                width: 100%;
             }
         }
     }
@@ -27,6 +31,13 @@
             }
         }
     }
+    .page section .row.sevices {
+        .row {
+            .col {
+                width: calc((100% - 60px) / 2);
+            }
+        }
+    }
 }
 
 @media (min-width: 576px) {}
@@ -38,6 +49,28 @@
     }
 }
 
+// .row.sevices {
+//     .container {
+//         h2 {}
+//     }
+//     .row {
+//         .col {
+//             width: calc((100% - 60px)/3);
+//             h3 {
+//                 font-size: 22px;
+//             }
+//             p {
+//                 font-size: 22px;
+//                 margin: 5px 0;
+//             }
+//             .iconBox {
+//                 .icon {
+//                     width: 75px;
+//                 }
+//             }
+//         }
+//     }
+// }
 // Medium devices (tablets, 768px and up)
 @media screen and (min-width: 768px) and (max-width: 992px) {}
 
