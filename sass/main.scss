@@ -7,11 +7,36 @@ $second-color:#4785ac;
 }
 
 //Golble styles
-i {
+i:not(.float, .my-float) {
     color: $main-color;
     font-weight: 600 !important;
     margin: 5px;
     font-size: 22px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    .my-float {
+        margin-top: 16px;
+    }
 }
 
 a {
@@ -67,23 +92,6 @@ ul {
 }
 
 .page {
-    .float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 40px;
-        left: 40px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 100;
-    }
-    .my-float {
-        margin-top: 16px;
-    }
     header {
         .row {
             width: 100%;
@@ -91,6 +99,9 @@ ul {
                 background-color: #141414;
                 border-bottom: 2px solid #646060;
                 padding: 0;
+                .container {
+                    padding: 2px;
+                }
             }
             &.header {
                 background-color: #1c1917;
@@ -104,6 +115,7 @@ ul {
                         width: 30px;
                         height: 30px;
                         padding: 0 4px;
+                        display: none;
                         cursor: pointer;
                         span {
                             @include dflex();
@@ -114,7 +126,21 @@ ul {
                             margin: 5px 0;
                         }
                     }
-                    ul {}
+                    ul {
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        // z-index: 100;
+                        @include dflex();
+                        direction: rtl;
+                        li {
+                            margin: 0 20px;
+                            font-size: 20px;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
                 }
                 $dim:40px;
                 .logo {
@@ -137,7 +163,7 @@ ul {
                 background-image: url("./../img/img\ 1.webp");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 84vh;
+                height: 82vh;
                 position: relative;
                 @include transition(background-image,
                 0.3s);
@@ -283,7 +309,7 @@ ul {
         }
         .row.sevices {
             background-color: #f1f1f1;
-            padding-bottom: 75px;
+            padding-bottom: 50px;
             .container {
                 flex-direction: column;
                 h2 {
@@ -330,7 +356,7 @@ ul {
                     justify-content: flex-start;
                     .imgBox {
                         position: absolute;
-                        top: -130px;
+                        top: -129px;
                         right: 0;
                         margin: 0 50px;
                         img {
@@ -393,7 +419,7 @@ ul {
             }
             .container {
                 align-items: flex-start;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 .col {
                     width: calc((100% - 180px) / 3);
                 }
@@ -419,9 +445,9 @@ ul {
                 direction: ltr;
                 align-items: center;
                 a {
-                    color: $second-color;
+                    color: #fff;
                     &:hover {
-                        color: $main-color
+                        color: $main-color;
                     }
                 }
                 i {

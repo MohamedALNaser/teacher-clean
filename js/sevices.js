@@ -30,7 +30,7 @@ for (let i = 0; i < servicesName.length; i++) {
   serviseItemIcon.classList.add("iconBox");
   let serviseItemIconImg = document.createElement("img");
   serviseItemIconImg.classList.add("icon");
-  serviseItemIconImg.src = `./img/servise ${i}.jpeg`;
+  serviseItemIconImg.src = `./img/servise ${i}.png`;
   let serviseItemName = document.createElement("h3");
   let serviseItemInfo = document.createElement("p");
   let NameText = document.createTextNode(servicesName[i]);
