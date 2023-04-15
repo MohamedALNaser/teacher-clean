@@ -1,3 +1,20 @@
+.row.contact {
+    .container {
+        .row {
+            .left {
+                .imgBox {
+                    img {}
+                }
+            }
+            .right {
+                h2 {}
+                h4 {}
+                button.tell {}
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 420px) {
     .page header .row.home h1 {
         font-size: 42px;

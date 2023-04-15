@@ -9,6 +9,19 @@ i {
   font-size: 22px;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0;
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
@@ -19,18 +32,37 @@ i {
   gap: 5px;
 }
 
+.page .float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.page .my-float {
+  margin-top: 16px;
+}
 .page header .row {
   width: 100%;
 }
 .page header .row.contact {
   background-color: #141414;
   border-bottom: 2px solid #646060;
+  padding: 0;
 }
 .page header .row.header {
   background-color: #1c1917;
 }
 .page header .row.header .container {
   justify-content: space-between;
+  padding: 5px 15px;
 }
 .page header .row.header .menu {
   display: flex;
@@ -118,7 +150,7 @@ i {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  height: 30px;
+  height: 40px;
   width: 93px;
   z-index: 10;
   transform: translate(-50%, 0);
@@ -227,6 +259,7 @@ i {
 }
 .page section .row.sevices {
   background-color: #f1f1f1;
+  padding-bottom: 75px;
 }
 .page section .row.sevices .container {
   flex-direction: column;
@@ -267,4 +300,110 @@ i {
 }
 .page section .row.sevices .row .col .iconBox .icon {
   width: 120px;
+}
+.page section .row.contact {
+  direction: rtl;
+  position: relative;
+  background-image: url("./../img/contactBg.jpg");
+}
+.page section .row.contact .container .row {
+  justify-content: flex-start;
+}
+.page section .row.contact .container .row .imgBox {
+  position: absolute;
+  top: -130px;
+  right: 0;
+  margin: 0 50px;
+}
+.page section .row.contact .container .row .imgBox img {
+  width: 330px;
+  height: 460px;
+}
+.page section .row.contact .container .row .contact {
+  margin-right: 325px;
+  margin-top: 50px;
+}
+.page section .row.contact .container .row .contact h1 {
+  margin: 0 0 40px;
+}
+.page section .row.contact .container .row .contact h4 {
+  font-size: 20px;
+}
+.page section .row.contact .container .row .contact a.tell {
+  text-decoration: none;
+  padding: 12px 18px;
+  background-color: #00ab00;
+  color: #000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.page footer {
+  direction: rtl;
+  background-color: #141414;
+  color: #fff;
+}
+.page footer a {
+  color: #fff;
+}
+.page footer .row h3 {
+  position: relative;
+}
+.page footer .row h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #aedfdd;
+}
+.page footer .row ul {
+  margin: 30px 8px;
+}
+.page footer .row p,
+.page footer .row li {
+  font-weight: 600;
+}
+.page footer .row .container {
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.page footer .row .container .col {
+  width: calc((100% - 180px) / 3);
+}
+.page footer .row .container .logo img {
+  width: 125px;
+}
+.page footer .row .container i {
+  width: 35px;
+  height: 35px;
+  border: 2px solid;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+.page footer .row.design {
+  border-top: 2px solid #646060;
+}
+.page footer .row.design .container {
+  direction: ltr;
+  align-items: center;
+}
+.page footer .row.design .container a {
+  color: #4785ac;
+}
+.page footer .row.design .container a:hover {
+  color: #aedfdd;
+}
+.page footer .row.design .container i:hover {
+  background-color: #fff;
+  color: #4785ac;
 }/*# sourceMappingURL=main.css.map */
